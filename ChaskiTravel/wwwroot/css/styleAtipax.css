@@ -1,0 +1,469 @@
+﻿html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.headerAtipax {
+    height: 60px;
+}
+
+.fondo {
+    background-image: url(/img/f18.jpg);
+    background-size: cover;
+    background-position: 50% 30%;
+    height: 450px
+}
+.onlyMenu{
+    padding-top: 10px;
+}
+.logo {
+    width: auto;
+    height: 40px;
+}
+
+.fondoMenu {
+    width: 100%;
+    height: 400px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 6px;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-weight: bold;
+}
+
+ul li {
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+    a:hover {
+        color: pink;
+    }
+
+footer {
+    background-color: #BFD6D6;
+    margin-top: auto;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: dimgrey;
+    
+}
+footer h4 {
+    font-size: 17px;
+}
+.redes{
+    padding-top: 15px;
+}
+/* STYLE INICIO*/
+.nove {
+    width: 260px;
+    height: 240px;
+    padding-right: 40px;
+}
+
+.fourFotos {
+    margin-left: 160px;
+    margin-right: 100px;
+}
+
+.hotel {
+    width: 120px;
+    height: 120px;
+    padding-right: 20px;
+    margin-left: 90px;
+    padding-bottom: 5px;
+}
+
+.hotels {
+    background-color: #BFD6D6;
+    height: 170px;
+}
+
+.hotelBahia {
+    width: 220px;
+    height: 140px;
+    margin-left: 60px;
+}
+
+.hotelBlue {
+    width: 220px;
+    height: 100px;
+    padding-bottom: 19px;
+    margin-left: 60px;
+}
+
+.hotelTigre {
+    width: 220px;
+    height: 100px;
+    padding-bottom: 10px;
+    margin-left: 60px;
+}
+
+.noso {
+    width: 500px;
+    height: 600px;
+}
+
+.nosotros {
+    display: flex;
+}
+
+.imgNosotros {
+    margin-left: 70px;
+}
+
+.sobreNosotros {
+    background-color: #F3F3F3;
+    height: 500px;
+    width: 600px;
+    margin-top: 38px;
+    margin-left: 100px;
+}
+
+    .sobreNosotros h2 {
+        text-align: center;
+        margin-top: 80px;
+        color: #22326A;
+        font-size: 45px;
+    }
+
+    .sobreNosotros p {
+        text-align: center;
+        margin-top: 20px;
+        color: #154572;
+        font-size: 32px;
+    }
+/* STYLE CONTACTO*/
+.todoContacto {
+    width: 840px;
+    height: 690px;
+    display: flex;
+    margin-left: 270px;
+   
+    padding-top: 60px;
+}
+
+.cuadros {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 400px;
+    height: 300px;
+    margin-left: 20px;
+}
+
+.cuadros h3 {
+    text-align: center;
+    font-size: 27px;
+    padding-top: 40px;
+}
+
+.cuadros p {
+    text-align: center;
+    font-size: 20px;
+}
+
+/* STYLE ESCOJE DESTINO*/
+
+.filtroDestino {
+    background-image: url(/img/f17.jpg);
+    background-size: cover;
+    background-position: 50% 30%;
+    height: 300px;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dest {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 35px;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+    .dest p {
+        margin-right: 15px;
+        font-size: 28px;
+        opacity: 0.9;
+    }
+
+    .dest .nameCiudad {
+        margin-right: 19px;
+        padding-top: 10px;
+        border: none;
+    }
+
+    .dest .btCiudad {
+        margin-left: 10px;
+        padding: 13px 17px 13px 17px;
+        border: none;
+        border-radius: 6px;
+        background-color: #286679;
+        color: white;
+    }
+/* STYLE DEL LADO DEL ADMINISTRADOR*/
+
+.tituloMantenimiento {
+    text-align: center;
+    font-size: 32px;
+}
+
+.masterDivision {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    padding-bottom: 50px;
+}
+
+.listaDos {
+    width: 50%;
+    margin-right: 70px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.parcialEditar {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.createUno {
+    margin-left: 80px;
+    margin-bottom: 8px;
+    width: 30%;
+    padding-bottom: 15px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+    .createUno h2 {
+        text-align: center;
+        font-size: 20px;
+        margin-top: 0;
+        padding-top: 4px;
+        padding-bottom: 5px;
+        background-color: #49586D;
+        color: white;
+    }
+
+.formulario {
+    padding-left: 8px;
+    margin-top: 70px;
+}
+
+.botonAgregar {
+    margin-top: 16px;
+    margin-left: 130px;
+}
+
+.editar {
+    height: 23px;
+    width: 22px;
+    padding-left: 3px;
+}
+
+.eliminar {
+    height: 25px;
+    width: 28px;
+    padding-left: 3px;
+}
+
+/* style edit */
+
+.editarCuadro {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    width: 40%;
+    margin-left: 450px;
+    margin-top: 100px;
+}
+    .editarCuadro h2 {
+        text-align: center;
+        font-size: 20px;
+        margin-top: 0;
+        padding-top: 4px;
+        padding-bottom: 5px;
+        background-color: #49586D;
+        color: white;
+    }
+
+.formularioEdit {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.form-group{
+    margin-top: 10px;
+    padding-bottom:15px;
+    margin-left: 150px;
+}
+
+/*estilos para eccommerce*/
+
+
+.registro {
+    
+    height: auto;
+    margin: 1%;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    
+}
+
+.deshabilita {
+    visibility: hidden;
+}
+
+
+/*img {
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}*/
+.linkSeleccion{
+    color : darkslateblue;
+
+}
+.labelPais {
+    color: darkslateblue;
+}
+
+/*style de seleccionar*/
+.cajaTodo{
+  margin-top: 130px;
+    width: 80%;
+    
+    margin-left: 150px;
+    display: flex;
+  
+   
+}
+.fondoSele {
+    height: 600px;
+    background-image: url(/img/fondo.jpg);
+    background-size: cover;
+}
+.fondoSele h4{
+    font-size: 40px;
+    padding-top:60px;
+}
+
+.btnBoto {
+    padding-top: 10px;
+    margin-left: 20px;
+}
+
+.btnCompra {
+    padding-top: 20px;
+    margin-left: 60px;
+}
+/*
+    **************/
+/*style para comprar*/
+.boxComprar {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    width: 40%;
+    margin-left: 370px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.btCom {
+    padding-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.titCompra{
+    text-align: center;
+    margin-top: 10px;
+    color:cadetblue;
+
+}
+.formularioCompra {
+    padding-left: 8px;
+    margin-top: 70px;
+}
+/*style para portal*/
+.codDes {
+    visibility: hidden;
+}
+
+.alinear{
+    text-align: center;
+}
+.titul {
+    color: darkslateblue;
+    font-weight: 600;
+}
+.porCol{
+    margin-left: 70px;
+    margin-top:20px;
+}
+.caPo{
+    width: 30rem;
+}
+/*style para resumen */
+.hi {
+    visibility: hidden;
+}
+
+.resCol{
+    margin-top: 30px;
+    margin-left: 110px;
+}
+.totalPagar {
+    margin-left: 600px;
+    width:30%;
+    margin-top: 10px;
+   
+}
+.botonesResumen{
+    margin-left: 570px;
+    margin-top: 15px;
+    margin-bottom:20px;
+}
+.caResu{
+    width: 30rem;
+}
+
+/*STYLE PARA CONSULTA*/
+.tablaConsulta {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    width: 80%;
+    
+    margin-left: 160px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+
+.formulaConsulta {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    margin-top: 80px;
+    margin-left: 160px;
+    width: 80%;
+    padding: 20px;
+}
+.expandir{
+
+}

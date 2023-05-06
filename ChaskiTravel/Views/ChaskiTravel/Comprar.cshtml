@@ -1,0 +1,59 @@
+﻿@model ChaskiTravel.Models.Cliente
+
+@{
+    ViewData["Title"] = "Comprar";
+}
+<div class="boxComprar">
+   
+        <h1 class="titCompra">¡Llene sus datos!</h1>
+    <div class="formularioCompra">
+        <form asp-action="Comprar" class="row g-2 ">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="col-md-5">
+                <label asp-for="nombre" class="control-label"></label>
+                <input asp-for="nombre" class="form-control" />
+                <span asp-validation-for="nombre" class="text-danger"></span>
+            </div>
+            <div class="col-md-5">
+                <label asp-for="apePaterno" class="control-label"></label>
+                <input asp-for="apePaterno" class="form-control" />
+                <span asp-validation-for="apePaterno" class="text-danger"></span>
+            </div>
+            <div class="col-md-5">
+                <label asp-for="apeMaterno" class="control-label"></label>
+                <input asp-for="apeMaterno" class="form-control" />
+                <span asp-validation-for="apeMaterno" class="text-danger"></span>
+            </div>
+            <div class="col-md-5">
+                <label asp-for="dni" class="control-label"></label>
+                <input asp-for="dni" class="form-control" />
+                <span asp-validation-for="dni" class="text-danger"></span>
+            </div>
+            <div class="col-md-5">
+                <label asp-for="telefono" class="control-label"></label>
+                <input asp-for="telefono" class="form-control" />
+                <span asp-validation-for="telefono" class="text-danger"></span>
+            </div>
+            <div class="col-md-5">
+                <label asp-for="email" class="control-label"></label>
+                <input asp-for="email" class="form-control" />
+                <span asp-validation-for="email" class="text-danger"></span>
+            </div>
+            <div class="col-md-5 btCom">
+                <input type="submit" value="Registrar" class="btn btn-primary" />
+                <a asp-action="Portal" class="btn btn-primary">Ir a la Tienda</a>
+            </div>
+            @if (@ViewBag.mensaje != null)
+            {
+                <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                    @ViewBag.mensaje
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+
+                </div>
+            }
+        </form>
+    </div>
+
+</div>
+
+

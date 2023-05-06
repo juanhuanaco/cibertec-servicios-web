@@ -1,0 +1,55 @@
+﻿@model IEnumerable<ChaskiTravel.Models.Hotel>
+
+
+<table class="table table-striped">
+    <thead >
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.idHotel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nomHotel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.categoriaHotel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.precioHotel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.descripcionHotel)
+            </th>
+       
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idHotel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nomHotel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.categoriaHotel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.precioHotel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.descripcionHotel)
+                </td>
+              
+                <td>
+                    @Html.ActionLink("Actualizar", "Edit", new {  id=item.idHotel })<img src="~/img/editar.png" class="editar" />
+
+                    @Html.ActionLink("Eliminar", "Delete", new {  id=item.idHotel })<img src="~/img/eliminar.png" class="eliminar" />
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

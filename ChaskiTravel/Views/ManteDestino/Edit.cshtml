@@ -1,0 +1,64 @@
+﻿@model ChaskiTravel.Models.Destino
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="editarCuadro">
+    <h2>Editar Destino</h2>
+
+    @if (@ViewBag.mensajeEditar != null)
+    {
+        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+            @ViewBag.mensajeEditar
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+
+        </div>
+    }
+    <div class="formularioEdit">
+    <form asp-action="Edit" class="row g-3">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="col-md-5">
+                <label asp-for="idDestino" class="control-label"></label>
+                <input asp-for="idDestino" class="form-control" readonly="true" />
+                <span asp-validation-for="idDestino" class="text-danger"></span>
+            </div>
+            <div class="col-md-5">
+                <label asp-for="pais" class="control-label"></label>
+                <input asp-for="pais" class="form-control" />
+                <span asp-validation-for="pais" class="text-danger"></span>
+            </div>
+            <div class="col-md-5">
+                <label asp-for="ciudad" class="control-label"></label>
+                <input asp-for="ciudad" class="form-control" />
+                <span asp-validation-for="ciudad" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-5">
+                <label asp-for="UnidadesEnExistencia" class="control-label"></label>
+                <input asp-for="UnidadesEnExistencia" class="form-control" />
+                <span asp-validation-for="UnidadesEnExistencia" class="text-danger"></span>
+            </div>
+      
+            <div class="col-md-5">
+                <label asp-for="idHotel" class="control-label"></label>
+                <select asp-for="idHotel" asp-items="@ViewBag.hotelLis" class="form-select"></select>
+            </div>
+        <div class="col-md-5">
+            <label asp-for="IdCategoria" class="control-label"></label>
+                <select asp-for="IdCategoria" asp-items="@ViewBag.categoriaLis" class="form-select"></select>
+            </div>
+             <div class="col-md-5">
+            <label asp-for="idTour" class="control-label"></label>
+                <select asp-for="idTour" asp-items="@ViewBag.toursList" class="form-select"></select>
+            </div>
+              
+   
+            <div class="form-group">
+                <input type="submit" value="Actualizar" class="btn btn-outline-success" />
+                <a asp-action="Create" class="btn btn-outline-success">Volver</a>
+            </div>
+        </form>
+    </div>
+  
+</div>

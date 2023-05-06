@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Logueo</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/styleLogin.css"  asp-append-version="true"  />
+
+</head>
+<body>
+    <div class="login" >
+        <h2>¡Bienvenido a Atipax!</h2>
+        <div class="loginCampos">
+
+         <form asp-controller="Acceso" asp-action="Logueo" method="post">
+                <div class="mb-3 row">
+                    <label for="exampleInputEmail1" class="form-label ico"> Usuario:</label>
+                    <div class="col-sm-6">
+                    <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuario">
+                    </div>
+              </div>
+                <div class="mb-3 row">
+                    <label for="exampleInputPassword1" class="form-label ico">Contraseña:</label>
+                    <div class="col-sm-6">
+
+                        <input type="password" class="form-control"  id="pass" name="pass" placeholder="Contraseña">
+                    </div>
+              </div>
+                
+              <button type="submit" class="btn botonIniciar">Iniciar Sesión</button>
+        </form>
+
+
+        </div>
+    </div>
+   
+
+
+</body>
+   <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>

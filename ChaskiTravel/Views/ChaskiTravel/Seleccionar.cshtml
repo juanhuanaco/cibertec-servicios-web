@@ -1,0 +1,79 @@
+﻿@model ChaskiTravel.Models.Destino
+
+@{
+    ViewData["Title"] = "Seleccionar";
+}
+
+<link href="~/css/styleAtipax.css" rel="stylesheet" />
+<div class="fondoSele">
+    <h4 style="text-align:center">Detalle del Destino</h4>
+<div class="cajaTodo">
+
+    <div class="cajaDestino card w-50 text-dark bg-light mb-3 ">
+        <div class="card-body">
+            <div class="card-header">Destino</div>
+            <h5 class="card-title">@Html.DisplayFor(model => model.pais),@Html.DisplayFor(model => model.ciudad)</h5>
+           
+            <p class="card-text"> Código:   @Html.DisplayFor(model => model.idDestino)</p>
+            <p class="card-text"> Stock de huéspedes:   @Html.DisplayFor(model => model.UnidadesEnExistencia)</p>
+        
+                 
+            
+               
+        </div>
+
+        </div>
+    <div class="cajaHotel card w-50 text-dark bg-light mb-3">
+        <div class="card-body">
+            <div class="card-header">Hotel</div>
+            <h5 class="card-title">@Html.DisplayFor(model => model.nomHotel)</h5>
+
+            <p class="card-text"> Estrellas:   @Html.DisplayFor(model => model.categoriaHotel)</p>
+            <p class="card-text"> Precio:          @Html.DisplayFor(model => model.precioHotel)</p>
+            <p class="card-text"> Vuelo:          @Html.DisplayFor(model => model.NombreCategoria)</p>
+        </div>
+
+      </div>
+       
+    <div class="cajaTour card w-50 text-dark bg-light mb-3">
+        <div class="card-body">
+            <div class="card-header">Tour</div>
+            <h5 class="card-title">@Html.DisplayFor(model => model.precioTour)</h5>
+
+            <p class="card-text"> Contiene:   @Html.DisplayFor(model => model.descripcionTour)</p>
+        </div>
+                
+     </div>
+
+    <div class="cajaLlenar card w-50 text-dark bg-light mb-3">
+         <div class="card-body">
+            <div class="card-header">Compra</div>
+            <form action="Seleccionar" method="post">
+                @Html.Hidden("codigo", Model.idDestino)
+                
+                    <div class="cantidad">
+                        <label> Cantidad de Personas:</label>
+                        <div class="boxCantidad">@Html.TextBox("cantidad", 1)
+                        </div>
+                    </div>
+                    <div class="btnBoto">
+                   
+                        <input type="submit" value="Agregar" class="btn btn-primary" />
+                        <a asp-action="Portal" class="btn btn-primary">Volver</a>
+                    
+                     </div>
+            </form>
+            <div>
+                @ViewBag.mensaje
+            </div>
+            <div class="btnCompra">
+            <p>
+                <a asp-action="Resumen" class="btn btn-danger">Comprar </a>
+            </p>
+                </div>
+        </div>
+    
+    </div>
+</div>
+
+</div>

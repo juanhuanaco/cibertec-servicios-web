@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ChaskiTravel.Models.Compra>
+
+@{
+    ViewData["Title"] = "Resumen";
+}
+<link href="~/css/styleAtipax.css" rel="stylesheet" />
+
+<div class="row row-cols-1 row-cols-md-2 g-4 resCol">
+@foreach (var item in Model)
+    {
+        <div class="col">
+        <div class="card caResu text-dark bg-light mb-3 ">
+            <div class="card-body">
+                <div class="card-header">Resumen de Compra</div>
+      
+                <p class="card-text">  @Html.DisplayFor(modelItem => item.pais), @Html.DisplayFor(modelItem => item.ciudad)</p>
+                <p class="card-text"> Hotel:    @Html.DisplayFor(modelItem => item.nomHotel) </p>
+                <p class="card-text"> Precio Hotel:   @Html.DisplayFor(modelItem => item.precioHotel) </p>
+                <p class="card-text">Tour:  @Html.DisplayFor(modelItem => item.descripcionTour)</p>
+                <p class="card-text">Precio Tour:   @Html.DisplayFor(modelItem => item.precioTour) </p>
+                <p class="card-text"> N° personas: @Html.DisplayFor(modelItem => item.cantidad)</p>
+                <p class="card-text "> Precio del Paquete: @Html.DisplayFor(modelItem => item.monto)</p>
+                <p class="card-text hi">@Html.DisplayFor(modelItem => item.codigo) @Html.DisplayFor(modelItem => item.NombreCategoria) @Html.DisplayFor(modelItem => item.categoriaHotel) @Html.DisplayFor(modelItem => item.UnidadesEnExistencia)</p>
+                <hr />
+               
+                    <button class="btn btn btn-danger"> @Html.ActionLink("Eliminar Compra", "Delete", new { id=item.codigo }) <img src="~/img/eliminar.png" class="eliminar" /></button>
+
+            </div>
+  
+        </div>
+        </div>
+    }
+</div>
+<hr />
+<div class="totalPagar">
+    <p class="card-text">
+        Total a Pagar(/S.):      @Model.Sum(c=>c.monto)
+    </p>
+</div>
+<hr />
+<div class="botonesResumen">
+    
+    <a asp-action="Portal" class="btn btn-primary">Buscar otro destino</a>
+    <a asp-action="Comprar" class="btn btn-primary">Comprar</a>
+</div>
+

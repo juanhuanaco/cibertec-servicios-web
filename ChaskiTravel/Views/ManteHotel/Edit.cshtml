@@ -1,0 +1,58 @@
+﻿@model ChaskiTravel.Models.Hotel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+<div class="editarCuadro">
+    <h2>Editar Hotel</h2>
+
+    @if (@ViewBag.mensajeEditar != null)
+    {
+        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+            @ViewBag.mensajeEditar
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+
+        </div>
+    }
+    <div class="formularioEdit">
+        <form asp-action="Edit" class="row g-3">
+            
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="col-md-5">
+                <label asp-for="idHotel" class="control-label"></label>
+                <input asp-for="idHotel" class="form-control" readonly="true" />
+                <span asp-validation-for="idHotel" class="text-danger"></span>
+            </div>
+            <div class="col-md-5">
+                <label asp-for="nomHotel" class="control-label"></label>
+                <input asp-for="nomHotel" class="form-control" />
+                <span asp-validation-for="nomHotel" class="text-danger"></span>
+            </div>
+            <div class="col-md-5">
+                <label asp-for="categoriaHotel" class="control-label"></label>
+                <input asp-for="categoriaHotel" class="form-control" />
+                <span asp-validation-for="categoriaHotel" class="text-danger"></span>
+            </div>
+            <div class="col-md-5">
+                <label asp-for="precioHotel" class="control-label"></label>
+                <input asp-for="precioHotel" class="form-control" />
+                <span asp-validation-for="precioHotel" class="text-danger"></span>
+            </div>
+            <div class="col-md-5">
+                <label asp-for="descripcionHotel" class="control-label"></label>
+                <input asp-for="descripcionHotel" class="form-control" />
+                <span asp-validation-for="descripcionHotel" class="text-danger"></span>
+            </div>
+         
+            <div class="form-group">
+                <input type="submit" value="Actualizar" class="btn btn-outline-success" />
+                <a asp-action="Create" class="btn btn-outline-success">Volver</a>
+            </div>
+        </form>
+    </div>
+    
+</div>
+
+

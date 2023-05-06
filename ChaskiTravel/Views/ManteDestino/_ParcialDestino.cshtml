@@ -1,0 +1,70 @@
+﻿@model IEnumerable<ChaskiTravel.Models.Destino>
+
+
+<table class="table table-striped">
+    <thead >
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.idDestino)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pais)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ciudad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.idHotel)
+            </th>
+               
+              
+            <th>
+                @Html.DisplayNameFor(model => model.IdCategoria)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.idTour)
+            </th>
+     
+            <th>
+                @Html.DisplayNameFor(model => model.UnidadesEnExistencia)
+            </th>
+  
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.idDestino)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pais)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ciudad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idHotel)
+            </td>
+       
+            <td>
+                    @Html.DisplayFor(modelItem => item.IdCategoria)
+            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idTour)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UnidadesEnExistencia)
+            </td>
+            
+            <td>
+                    @Html.ActionLink("Actualizar", "Edit", new {  id=item.idDestino })<img src="~/img/editar.png" class="editar" />
+
+                    @Html.ActionLink("Eliminar", "Delete", new {  id=item.idDestino })<img src="~/img/eliminar.png" class="eliminar" />
+
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

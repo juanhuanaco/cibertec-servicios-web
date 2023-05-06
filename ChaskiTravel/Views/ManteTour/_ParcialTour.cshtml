@@ -1,0 +1,41 @@
+﻿@model IEnumerable<ChaskiTravel.Models.Tour>
+
+<table class="table table-striped">
+    <thead >
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.idTour)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.precioTour)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.descripcionTour)
+            </th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.idTour)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.precioTour)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.descripcionTour)
+            </td>
+            <td>
+                    
+                     @Html.ActionLink("Actualizar", "Edit", new {  id=item.idTour })<img src="~/img/editar.png" class="editar" />
+
+                     @Html.ActionLink("Eliminar", "Delete", new {  id=item.idTour  })<img src="~/img/eliminar.png" class="eliminar"/>
+            
+                 </td>
+        </tr>
+}
+    </tbody>
+</table>
+

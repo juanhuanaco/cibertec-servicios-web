@@ -1,0 +1,47 @@
+﻿@model IEnumerable<ChaskiTravel.Models.Destino>
+
+@{
+    ViewData["Title"] = "Portal";
+}
+
+
+
+    <link href="~/css/styleAtipax.css" rel="stylesheet" />
+
+<div class="escojeDestino">
+    <div class="filtroDestino">
+        <div class="dest">
+            <form>
+            <p>Ingrese destino\ciudad:</p>
+            @Html.TextBox("pais")
+            <button  class="btCiudad">BUSCAR</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+<div class="row row-cols-1 row-cols-md-2 g-4 porCol">
+@foreach (var item in Model)
+{
+
+<div class="col">
+            <div class="card  caPo text-dark bg-light mb-3 ">
+        <div class="card-body">
+           
+                <h5 class="card-title titul alinear">@Html.DisplayFor(modelItem => item.pais), @Html.DisplayFor(modelItem => item.ciudad)</h5>
+                <p class="card-text alinear">@Html.DisplayFor(modelItem => item.categoriaHotel) </p>
+                <p class="card-text alinear">  @Html.DisplayFor(modelItem => item.descripcionTour)</p>
+                <p class="card-text alinear"> Cupos:    @Html.DisplayFor(modelItem => item.UnidadesEnExistencia) </p>
+                 <hr />
+                <p class="card-text alinear linkSeleccion"><img src="~/img/imgDetalle.png">@Html.ActionLink("Ver Detalle", "Seleccionar", new {id=item.idDestino })</p>
+                <p class="card-text codDes alinear">@Html.DisplayFor(modelItem => item.idDestino) </p>
+            
+        </div>
+
+    </div>
+</div>
+
+}
+</div>
+
+

@@ -1,0 +1,61 @@
+﻿@using ChaskiTravel.Models
+@model ChaskiTravel.Models.Hotel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="tituloMantenimiento">Mantenimiento Hotel</h1>
+@if (@ViewBag.mensaje != null)
+{
+    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+        @ViewBag.mensaje
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+
+    </div>
+}
+
+
+<div class="masterDivision">
+    <div class="createUno">
+        <h2>Agregar Hotel:</h2>
+        <div class="formulario">
+            <form asp-action="Create" class="row g-3">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+               
+                <div class="col-md-5">
+                    <label asp-for="nomHotel" class="control-label"></label>
+                <input asp-for="nomHotel" class="form-control" />
+                <span asp-validation-for="nomHotel" class="text-danger"></span>
+            </div>
+                <div class="col-md-5">
+                    <label asp-for="categoriaHotel" class="control-label"></label>
+                <input asp-for="categoriaHotel" class="form-control" />
+                    <span asp-validation-for="categoriaHotel" class="text-danger"></span>
+            </div>
+                <div class="col-md-5">
+                    <label asp-for="precioHotel" class="control-label"></label>
+                <input asp-for="precioHotel" class="form-control" />
+                <span asp-validation-for="precioHotel" class="text-danger"></span>
+            </div>
+                <div class="col-md-5">
+                    <label asp-for="descripcionHotel" class="control-label"></label>
+                    <input asp-for="descripcionHotel" class="form-control" />
+                    <span asp-validation-for="descripcionHotel" class="text-danger"></span>
+            </div>
+         
+                    <div class="form-group botonAgregar">
+                    <input type="submit" value="Agregar Hotel" class="btn btn-outline-success" />
+            </div>
+        </form>
+    </div>
+   
+</div>
+
+    <div class="listaDos">
+        <div class="parcialEditar">
+    @Html.Partial("_ParcialHotel", ViewBag.hotels as IEnumerable<Hotel>)
+                </div>
+    </div>
+</div>

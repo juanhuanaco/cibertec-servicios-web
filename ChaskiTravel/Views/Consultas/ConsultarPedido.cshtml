@@ -1,0 +1,91 @@
+﻿@model IEnumerable<ChaskiTravel.Models.Cliente>
+
+@{
+    ViewData["Title"] = "ConsultarPedido";
+}
+
+
+<h1 class="tituloMantenimiento">Consulta de pedidos</h1>
+<div class="formulaConsulta">
+    <div class="expandir">
+    <form>
+        <div class="row g-3 align-items-center">
+            <div class="col-auto">
+                <label for="inputPassword6" class="col-form-label">Ingrese una fecha</label>
+            </div>
+            <div class="col-auto">
+            @Html.TextBox("fecha")
+            </div>
+            <div class="col-auto">
+                    <button  class="btn btn-outline-success btCiudad">BUSCAR</button>
+            </div>
+        </div>
+    </form>
+    </div>
+</div>
+<div class="tablaConsulta">
+    <div class="parcialEditar">
+        <table class="table table-striped">
+    <thead >
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.idpedido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fpedido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.apePaterno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.apeMaterno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dni)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.telefono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.email)
+            </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.idpedido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fpedido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.apePaterno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.apeMaterno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dni)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.telefono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+          
+        </tr>
+}
+    </tbody>
+</table>
+    </div>
+</div>

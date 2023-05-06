@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ChaskiTravel.Models.Categoria>
+
+
+<table class="table table-striped">
+    <thead >
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IdCategoria)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreCategoria)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdCategoria)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NombreCategoria)
+                </td>
+                <td>
+                    @Html.ActionLink("Actualizar", "Edit", new {  id=item.IdCategoria })<img src="~/img/editar.png" class="editar" />
+
+                    @Html.ActionLink("Eliminar", "Delete", new {  id=item.IdCategoria })<img src="~/img/eliminar.png" class="eliminar" />
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
