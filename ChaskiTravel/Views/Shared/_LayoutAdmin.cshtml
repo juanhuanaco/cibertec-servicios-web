@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ChaskiTravel</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/styleAtipax.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/styleAdmi.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ProjectAtipax.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="d-flex" style="height: 100vh">
+        <div style="min-width:280px; background-color: #15273b">
+            <div style="text-align: center;color: white">
+                <h3 style="margin: 10px 0 0 0;">Chaski Travel</h3>
+                <span>- Administrador -</span>
+            </div>
+            @*<div style="width: 24px; height: 24px; background-color: greenyellow"></div>*@
+            <ul style="padding: 0; margin: 0 0 0 25px">
+                <li style="display: block; margin: 25px 0; letter-spacing: .3em"><img width="24px" height="24px" style="margin-right: 10px" src="~/icon/icon-tour.svg"/><a style="color: white" asp-action="Create" asp-controller="ManteTour">Tour</a></li>
+                <li style="display: block; margin: 25px 0; letter-spacing: .3em"><img width="24px" height="24px" style="margin-right: 10px" src="~/icon/icon-hotel.svg"/><a style="color: white" asp-action="Create" asp-controller="ManteHotel">Hotel</a></li>
+                <li style="display: block; margin: 25px 0; letter-spacing: .3em"><img width="24px" height="24px" style="margin-right: 10px" src="~/icon/icon-category.svg"/><a style="color: white" asp-action="Create" asp-controller="ManteCategoria">Categoria</a></li>
+                <li style="display: block; margin: 25px 0; letter-spacing: .3em"><img width="24px" height="24px" style="margin-right: 10px" src="~/icon/icon-route.svg"/><a style="color: white" asp-action="Create" asp-controller="ManteDestino">Destino</a></li>
+                <li style="display: block; margin: 25px 0; letter-spacing: .3em"><img width="24px" height="24px" style="margin-right: 10px" src="~/icon/icon-lens.svg"/><a style="color: white" asp-action="ConsultarPedido" asp-controller="Consultas">Consulta</a></li>
+                <li style="display: block; margin: 25px 0; letter-spacing: .3em"><img width="24px" height="24px" style="margin-right: 10px" src="~/icon/icon-close.svg"/><a style="color: white" asp-action="Salir" asp-controller="Acceso">Salir</a></li>
+            </ul>
+
+        </div>
+        <section>
+            @RenderBody()
+        </section>
+    </div>
+</body>
+</html>
