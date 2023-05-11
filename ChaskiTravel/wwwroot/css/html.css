@@ -161,12 +161,13 @@ footer h4 {
     height: 690px;
     display: flex;
     margin-left: 270px;
-   
+    background-color: aqua;
     padding-top: 60px;
 }
 
 .cuadros {
-    background-color: white;
+    background-color: #121212;
+    color:white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     width: 400px;
     height: 300px;

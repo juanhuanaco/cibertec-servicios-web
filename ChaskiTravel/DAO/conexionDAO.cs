@@ -7,7 +7,7 @@ namespace ChaskiTravel.DAO
         //definicion de la conexion ( Cambien el server DESKTOP-OE6VUV5, por el de ustedes 
         //para que funcione la conexion a la bd)
         SqlConnection cn = new SqlConnection(
-        @"server = JDHQ\SQLEXPRESS;database = BDAtipax;Trusted_Connection = True;" +
+        @"server = DESKTOP-2K8V4T5;database = BDChaskiTravel;Trusted_Connection = True;" +
          "MultipleActiveResultSets = True;TrustServerCertificate = False;Encrypt = False");
 
         //lectura de la conexion, get
