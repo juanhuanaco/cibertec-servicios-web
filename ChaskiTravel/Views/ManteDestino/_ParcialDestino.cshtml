@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<ChaskiTravel.Models.Destino>
 
 
-<table class="table table-striped">
+<table class="table table-striped" style="color: white;">
     <thead >
         <tr>
             <th>
@@ -35,26 +35,26 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
+            <td style="color: white;">
                 @Html.DisplayFor(modelItem => item.idDestino)
             </td>
-            <td>
+            <td style="color: white;">
                 @Html.DisplayFor(modelItem => item.pais)
             </td>
-            <td>
+                <td style="color: white;">
                 @Html.DisplayFor(modelItem => item.ciudad)
             </td>
-            <td>
+                <td style="color: white;">
                 @Html.DisplayFor(modelItem => item.idHotel)
             </td>
        
-            <td>
+                <td style="color: white;">
                     @Html.DisplayFor(modelItem => item.IdCategoria)
             </td>
-                <td>
+                <td style="color: white;">
                     @Html.DisplayFor(modelItem => item.idTour)
                 </td>
-                <td>
+                <td style="color: white;">
                     @Html.DisplayFor(modelItem => item.UnidadesEnExistencia)
             </td>
             

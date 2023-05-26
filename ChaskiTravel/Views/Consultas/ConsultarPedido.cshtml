@@ -2,11 +2,12 @@
 
 @{
     ViewData["Title"] = "ConsultarPedido";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
 
-<h1 class="tituloMantenimiento">Consulta de pedidos</h1>
-<div class="formulaConsulta">
+<h1 class="tituloMantenimiento" style="color: white;">Consulta de pedidos</h1>
+<div class="formulaConsulta" style="color: white;">
     <div class="expandir">
     <form>
         <div class="row g-3 align-items-center">
@@ -23,33 +24,33 @@
     </form>
     </div>
 </div>
-<div class="tablaConsulta">
+<div class="tablaConsulta" style="color: white;">
     <div class="parcialEditar">
         <table class="table table-striped">
     <thead >
         <tr>
-            <th>
+            <th style="color: white;">
                 @Html.DisplayNameFor(model => model.idpedido)
             </th>
-            <th>
+            <th style="color: white;">
                 @Html.DisplayNameFor(model => model.fpedido)
             </th>
-            <th>
+            <th style="color: white;">
                 @Html.DisplayNameFor(model => model.nombre)
             </th>
-            <th>
+            <th style="color: white;">
                 @Html.DisplayNameFor(model => model.apePaterno)
             </th>
-            <th>
+            <th style="color: white;">
                 @Html.DisplayNameFor(model => model.apeMaterno)
             </th>
-            <th>
+            <th style="color: white;">
                 @Html.DisplayNameFor(model => model.dni)
             </th>
-            <th>
+            <th style="color: white;">
                 @Html.DisplayNameFor(model => model.telefono)
             </th>
-            <th>
+            <th style="color: white;">
                 @Html.DisplayNameFor(model => model.email)
             </th>
             
@@ -58,28 +59,28 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
+            <td style="color: white;">
                 @Html.DisplayFor(modelItem => item.idpedido)
             </td>
-            <td>
+            <td style="color: white;">
                 @Html.DisplayFor(modelItem => item.fpedido)
             </td>
-            <td>
+            <td style="color: white;">
                 @Html.DisplayFor(modelItem => item.nombre)
             </td>
-            <td>
+            <td style="color: white;">
                 @Html.DisplayFor(modelItem => item.apePaterno)
             </td>
-            <td>
+            <td style="color: white;">
                 @Html.DisplayFor(modelItem => item.apeMaterno)
             </td>
-            <td>
+            <td style="color: white;">
                 @Html.DisplayFor(modelItem => item.dni)
             </td>
-            <td>
+            <td style="color: white;">
                 @Html.DisplayFor(modelItem => item.telefono)
             </td>
-            <td>
+            <td style="color: white;">
                 @Html.DisplayFor(modelItem => item.email)
             </td>
           
