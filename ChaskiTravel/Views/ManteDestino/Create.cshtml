@@ -3,10 +3,10 @@
 
 @{
     ViewData["Title"] = "Create";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h1 class="tituloMantenimiento">Mantenimiento Destino</h1>
+<h1 class="tituloMantenimiento" style="color: white;">Mantenimiento Destino</h1>
 @if (@ViewBag.mensaje != null)
 {
     <div class="alert alert-primary alert-dismissible fade show" role="alert">
@@ -16,9 +16,7 @@
     </div>
 }
 
-
-
-<div class="masterDivision">
+<div class="masterDivision" style="color: white;">
     <div class="createUno">
         <h2>Agregar Destino:</h2>
         <div class="formulario">

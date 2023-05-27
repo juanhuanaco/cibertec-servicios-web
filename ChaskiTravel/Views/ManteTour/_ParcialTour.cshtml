@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<ChaskiTravel.Models.Tour>
 
-<table class="table table-striped">
+<table class="table table-striped" style="color: white;">
     <thead >
         <tr>
             <th>
@@ -18,16 +18,16 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
+            <td style="color: white;">
                 @Html.DisplayFor(modelItem => item.idTour)
             </td>
-            <td>
+            <td style="color: white;">
                     @Html.DisplayFor(modelItem => item.precioTour)
             </td>
-            <td>
+            <td style="color: white;">
                     @Html.DisplayFor(modelItem => item.descripcionTour)
             </td>
-            <td>
+                <td style="color: white;">
                     
                      @Html.ActionLink("Actualizar", "Edit", new {  id=item.idTour })<img src="~/img/editar.png" class="editar" />
 

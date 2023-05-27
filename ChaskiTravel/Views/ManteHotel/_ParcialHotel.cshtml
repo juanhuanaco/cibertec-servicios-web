@@ -1,8 +1,8 @@
 ﻿@model IEnumerable<ChaskiTravel.Models.Hotel>
 
 
-<table class="table table-striped">
-    <thead >
+<table class="table table-striped" style="color: white;">
+    <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.idHotel)
@@ -19,7 +19,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.descripcionHotel)
             </th>
-       
+
             <th>Acciones</th>
         </tr>
     </thead>
@@ -27,26 +27,26 @@
         @foreach (var item in Model)
         {
             <tr>
-                <td>
+                <td style="color: white;">
                     @Html.DisplayFor(modelItem => item.idHotel)
                 </td>
-                <td>
+                <td style="color: white;">
                     @Html.DisplayFor(modelItem => item.nomHotel)
                 </td>
-                <td>
+                <td style="color: white;">
                     @Html.DisplayFor(modelItem => item.categoriaHotel)
                 </td>
-                <td>
+                <td style="color: white;">
                     @Html.DisplayFor(modelItem => item.precioHotel)
                 </td>
-                <td>
+                <td style="color: white;">
                     @Html.DisplayFor(modelItem => item.descripcionHotel)
                 </td>
-              
-                <td>
-                    @Html.ActionLink("Actualizar", "Edit", new {  id=item.idHotel })<img src="~/img/editar.png" class="editar" />
 
-                    @Html.ActionLink("Eliminar", "Delete", new {  id=item.idHotel })<img src="~/img/eliminar.png" class="eliminar" />
+                <td style="color: white;">
+                    @Html.ActionLink("Actualizar", "Edit", new { id=item.idHotel })<img src="~/img/editar.png" class="editar" />
+
+                    @Html.ActionLink("Eliminar", "Delete", new { id=item.idHotel })<img src="~/img/eliminar.png" class="eliminar" />
 
                 </td>
             </tr>

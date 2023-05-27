@@ -3,10 +3,10 @@
 
 @{
     ViewData["Title"] = "Create";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h1 class="tituloMantenimiento">Mantenimiento Tour</h1>
+<h1 class="tituloMantenimiento" style="color: white;">Mantenimiento Tour</h1>
 
 
 @if (@ViewBag.mensaje != null)
@@ -17,14 +17,12 @@
 
     </div>
 }
-<div class="masterDivision">
+<div class="masterDivision" style="color: white;">
     <div class="createUno">
         <h2>Agregar Tour:</h2>
         <div class="formulario">
             <form asp-action="Create" class="row g-3">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
-                
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>            
                 <div class="col-md-7">
                     <label asp-for="precioTour" class="form-label">Precio:</label>
                     <input asp-for="precioTour" class="form-control" />
