@@ -5,7 +5,7 @@ namespace ChaskiTravel.DAO
     public class conexionDAO
     {
         SqlConnection cn = new SqlConnection(
-        @"server = .\SQLEXPRESS;database = BDChaskiTravel;Trusted_Connection = True;" +
+        @"server = .;database = BDChaskiTravel;Trusted_Connection = True;" +
          "MultipleActiveResultSets = True;TrustServerCertificate = False;Encrypt = False");
 
         //lectura de la conexion, get
