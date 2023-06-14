@@ -15,32 +15,70 @@
 
 </head>
 <body>
-    <div class="login" >
+    <!--<div class="login">
         <h2>¡Bienvenido a Chasky Travel!</h2>
         <div class="loginCampos">
 
-         <form asp-controller="Acceso" asp-action="Logueo" method="post">
+            <form asp-controller="Acceso" asp-action="Logueo" method="post">
                 <div class="mb-3 row">
                     <label for="exampleInputEmail1" class="form-label ico"> Usuario:</label>
                     <div class="col-sm-6">
-                    <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuario">
+                        <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuario">
                     </div>
-              </div>
+                </div>
                 <div class="mb-3 row">
                     <label for="exampleInputPassword1" class="form-label ico">Contraseña:</label>
                     <div class="col-sm-6">
 
-                        <input type="password" class="form-control"  id="pass" name="pass" placeholder="Contraseña">
+                        <input type="password" class="form-control" id="pass" name="pass" placeholder="Contraseña">
                     </div>
-              </div>
-                
-              <button type="submit" class="btn botonIniciar">Iniciar Sesión</button>
-        </form>
+                </div>
+
+                <button type="submit" class="btn botonIniciar">Iniciar Sesión</button>
+            </form>
 
 
         </div>
+    </div>-->
+
+    <div class="parent clearfix">
+        <div class="bg-illustration">
+            <img src="https://observatorioess.org.ar/wp-content/uploads/2019/12/chasqui-logo.png" alt="logo">
+
+            <div class="burger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+
+        <div class="login">
+            <div class="container">
+                <h1>Login to access to<br />your account</h1>
+
+                <div class="login-form">
+                    <form asp-controller="Acceso" asp-action="Logueo" method="post">
+                        <input type="text" id="usuario" name="usuario" placeholder="Usuario">
+                        <input type="password" id="pass" name="pass" placeholder="Contraseña">
+
+                        <div class="remember-form">
+                            <input type="checkbox">
+                            <span>Remember me</span>
+                        </div>
+                        <div class="forget-pass">
+                            <a href="#">Forgot Password ?</a>
+                        </div>
+
+                        <button type="submit">LOG-IN</button>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
     </div>
-   
+
 
 
 </body>
